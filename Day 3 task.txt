@@ -1,0 +1,177 @@
+1.for the given JSON iterate over all for loops(for , for in, for of, forEach)?
+
+
+let object=[
+    {
+        person:"John",
+        age:30,
+        company: "Google",
+    },
+    {
+        person:"Mohn",
+        age:37,
+        company:"Flipkart",
+    },
+    {
+        person:"Kohn",
+        age:38,
+        company:"Amazon",
+    },
+    {
+        person:"Sohan",
+        age:40,
+        company:"Myntra",
+    },
+    {
+        person:"Jenny",
+        age:70,
+        company:"Apple",
+    },
+]
+
+// for loop
+for(let i=0;i<object.length;i++)
+{ 
+    console.log(`
+        Person: ${object[i].person}
+        Age: ${object[i].age}
+        Company: ${object[i].company} 
+        `)
+
+}
+output:
+ Person: John
+       Age: 30
+        Company: Google
+
+
+       Person: Mohn
+       Age: 37
+        Company: Flipkart
+
+
+       Person: Kohn
+       Age: 38
+        Company: Amazon
+
+
+       Person: Sohan
+       Age: 40
+        Company: Myntra
+
+
+       Person: Jenny
+       Age: 70
+        Company: Apple
+// for each loop
+object.forEach((item)=>{
+    console.log(item);
+
+})
+
+output:
+
+{person: 'John', age: 30, company: 'Google'}
+script.js:41 {person: 'Mohn', age: 37, company: 'Flipkart'}
+script.js:41 {person: 'Kohn', age: 38, company: 'Amazon'}
+script.js:41 {person: 'Sohan', age: 40, company: 'Myntra'}
+script.js:41 {person: 'Jenny', age: 70, company: 'Apple'}
+ 
+//for in loop
+for(let key in object){
+    console.log(object[key])
+}
+
+output:
+
+{ person: 'John', age: 30, company: 'Google' }
+{ person: 'Mohn', age: 37, company: 'Flipkart' }
+{ person: 'Kohn', age: 38, company: 'Amazon' }       
+{ person: 'Sohan', age: 40, company: 'Myntra' }      
+{ person: 'Jenny', age: 70, company: 'Apple' }    
+
+
+//for of loop
+for(let data of object){
+    console.log(data)
+
+}
+output:
+ { person: 'John', age: 30, company: 'Google' }
+{ person: 'Mohn', age: 37, company: 'Flipkart' }
+{ person: 'Kohn', age: 38, company: 'Amazon' }       
+{ person: 'Sohan', age: 40, company: 'Myntra' }      
+{ person: 'Jenny', age: 70, company: 'Apple' }
+
+2. Create your own resume data in JSON format?
+
+let myResume={
+    "personal details":{
+        "name":"Jayalakshmi.R",
+    "email": "jayaravi91@gmail.com",
+    "phone": 9267992014,
+    "degree": "B.Tech",
+      "address": "ss avenue, padur, omr",
+      "postalCode": 600030,
+      "city": "Chennai",
+      "state": "Tamilnadu",
+      "country": "India",
+    },
+    "profiles":[{
+        "github":"https://github.com/jayaaru",
+    },],
+
+    "work":[{
+        "company":"Barclays",
+        "position":"process advisor",
+        "experience":"two years",
+    },],
+"education":[{
+    "institution": "Jaya Engineering college",
+    "department": "B.Tech",
+    "batch start year": 2008,
+    "batch end year": 2012,
+    "gpa": 7.8,
+},],
+"skills":[{
+    "name":"c,c++",
+},],
+"langauge":[{
+    "langauge":"tamil,english,telugu",
+},],}
+console.log(myResume)
+
+output:
+
+{
+  'personal details': {   
+    name: 'Jayalakshmi.R',
+    email: 'jayaravi91@gmail.com',
+    phone: 9267992014,
+    degree: 'B.Tech',
+    address: 'ss avenue, padur, omr',
+    postalCode: 600030,
+    city: 'Chennai',
+    state: 'Tamilnadu',
+    country: 'India'
+  },
+  profiles: [ { github: 'https://github.com/jayaaru' } ],
+  work: [
+    {
+      company: 'Barclays',
+      position: 'process advisor',
+      experience: 'two years'
+    }
+  ],
+  education: [
+    {
+      institution: 'Jaya Engineering college', 
+      department: 'B.Tech',
+      'batch start year': 2008,
+      'batch end year': 2012,
+      gpa: 7.8
+    }
+  ],
+  skills: [ { name: 'c,c++' } ],
+  langauge: [ { langauge: 'tamil,english,telugu' } ]
+}
